@@ -1,3 +1,4 @@
 ######################
 #### DEPENDENCIES ####
 ######################
+page_image.default_img = EXT:page_images/Resources/Public/Images/DefaultHeroImage.png
