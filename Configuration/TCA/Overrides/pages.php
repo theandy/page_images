@@ -9,7 +9,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 $additionalColumns = [
     'tx_page_image' => [
         'exclude' => 1,
-        'label' => 'LLL:EXT:page_overview/Resources/Private/Language/locallang_db.xlf:pages.tx_page_image',
+        'label' => 'LLL:EXT:page_images/Resources/Private/Language/locallang_db.xlf:pages.tx_page_image',
         'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
             'tx_page_image',
             [
@@ -31,7 +31,7 @@ ExtensionManagementUtility::addTCAcolumns('pages', $additionalColumns);
 ExtensionManagementUtility::addToAllTCAtypes(
     'pages',
     'tx_page_image',
-    '',
+    '1',
     'after:title'
 );
 
