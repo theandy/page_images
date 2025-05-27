@@ -1,8 +1,35 @@
-######################
-#### DEPENDENCIES ####
-######################
+lib.page_image = COA
+lib.page_image {
+    10 = FILES
+    10 {
+        references {
+            table = pages
+            uid.field = uid
+            fieldName = tx_page_image
+        }
+        renderObj = IMG_RESOURCE
+        renderObj {
+            file {
+                import.data = file:current:uid
+                treatIdAsReference = 1
+                crop.data = file:current:crop
+                width = 780c
+                height = 380c
+            }
+            altText.data = file:current:title
+            titleText.data = file:current:title
+        }
+        stdWrap.required = 1
+    }
 
+    20 = IMG_RESOURCE
+    20 {
+        file = {$page_image.default_img}
+        file.width = 780c
+        file.height = 380c
+        altText = Standardbild
+        titleText = Standardbild
+        stdWrap.if.isFalse.cObject < lib.page_image.10
+    }
+}
 
-################
-#### HELPER ####
-################
