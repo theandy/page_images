@@ -6,6 +6,9 @@
             <authorEmail>info@andreasloewer.de</authorEmail>
         </header>
         <body>
+            <trans-unit id="pages.tx_page_image">
+                <source>Hero-Image for this page</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
