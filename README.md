@@ -1,4 +1,5 @@
 Sitepackage for the project "Page Images"
 ==============================================================
 
-Add some explanation here.
+Use it in your fluid template:
+{f:cObject(typoscriptObjectPath: 'lib.page_image', data: {uid: data.uid})} 
