@@ -1,4 +1,5 @@
 ######################
 #### DEPENDENCIES ####
 ######################
+page_image.width = 80c
 page_image.default_img = EXT:page_images/Resources/Public/Images/DefaultHeroImage.png
