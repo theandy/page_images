@@ -14,7 +14,7 @@ lib.page_image {
                 treatIdAsReference = 1
                 crop.data = file:current:crop
                 width = {$page_image.width}
-                height = 380c
+                height = {$page_image.height}
             }
             altText.data = file:current:title
             titleText.data = file:current:title
@@ -26,7 +26,7 @@ lib.page_image {
     20 {
         file = {$page_image.default_img}
         width = {$page_image.width}
-        file.height = 380c
+        file.height = {$page_image.height}
         altText = Standardbild
         titleText = Standardbild
         stdWrap.if.isFalse.cObject < lib.page_image.10
