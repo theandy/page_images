@@ -18,6 +18,12 @@
             <trans-unit id="label.image.width">
                 <source>Width in pixels of the page image</source>
             </trans-unit>
+            <trans-unit id="label.image.height">
+                <source>Height in pixels of the page image</source>
+            </trans-unit>
+            <trans-unit id="label.default">
+                <source>Default image</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

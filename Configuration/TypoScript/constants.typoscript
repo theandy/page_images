@@ -1,5 +1,5 @@
 # constants.typoscript  (oberhalb der Konstanten, NICHT auskommentieren!)
-# customcategory=pageimage=LLL:EXT:page_images/Resources/Private/Language/locallang_be.xlf:cat.favicons
+# customcategory=pageimage=LLL:EXT:page_images/Resources/Private/Language/locallang_be.xlf:cat.pageimage
 # customsubcategory=files=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.files
 # customsubcategory=app=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.app
 # customsubcategory=manifest=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.manifest
@@ -9,7 +9,9 @@ plugin.tx.page_image {
 
     # cat=pageimage/010; type=string; label=LLL:EXT:page_images/Resources/Private/Language/locallang_be.xlf:label.image.width
     width = 1920c
+    # cat=pageimage/020; type=string; label=LLL:EXT:page_images/Resources/Private/Language/locallang_be.xlf:label.image.height
     height = 590c
+    # cat=pageimage/030; type=string; label=LLL:EXT:page_images/Resources/Private/Language/locallang_be.xlf:label.default
     default_img = EXT:page_images/Resources/Public/Images/DefaultHeroImage.png
 
 
