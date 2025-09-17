@@ -13,8 +13,8 @@ lib.page_image {
                 import.data = file:current:uid
                 treatIdAsReference = 1
                 crop.data = file:current:crop
-                width = {$page_image.width}
-                height = {$page_image.height}
+                width = {$plugin.tx.page_image.width}
+                height = {$plugin.tx.page_image.height}
             }
             altText.data = file:current:title
             titleText.data = file:current:title
@@ -24,9 +24,9 @@ lib.page_image {
 
     20 = IMG_RESOURCE
     20 {
-        file = {$page_image.default_img}
-        width = {$page_image.width}
-        file.height = {$page_image.height}
+        file = {$plugin.tx.page_image.default_img}
+        width = {$plugin.tx.page_image.width}
+        file.height = {$plugin.tx.page_image.height}
         altText = Standardbild
         titleText = Standardbild
         stdWrap.if.isFalse.cObject < lib.page_image.10
