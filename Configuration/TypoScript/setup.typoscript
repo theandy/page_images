@@ -74,3 +74,29 @@ lib.page_image {
 
 */
 
+
+lib.pageImages = FLUIDTEMPLATE
+lib.pageImages {
+    templateName = PageImages
+    templateRootPaths {
+        10 = EXT:page_images/Resources/Private/Templates/
+    }
+    partialRootPaths {
+        10 = EXT:page_images/Resources/Private/Partials/
+    }
+    layoutRootPaths {
+        10 = EXT:page_images/Resources/Private/Layouts/
+    }
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references {
+                table = pages
+                uid.data = TSFE:id
+                fieldName = tx_page_image
+            }
+            as = pageImages
+        }
+    }
+}
