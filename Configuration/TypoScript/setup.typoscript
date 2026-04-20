@@ -36,7 +36,7 @@ tt_content.page_images {
 
 }
 
-
+/*
 lib.page_image = COA
 lib.page_image {
     10 = FILES
@@ -71,4 +71,6 @@ lib.page_image {
         stdWrap.if.isFalse.cObject < lib.page_image.10
     }
 }
+
+*/
 
