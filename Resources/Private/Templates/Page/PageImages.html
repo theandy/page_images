@@ -1,0 +1,9 @@
+<f:if condition="{pageImages}">
+  <div class="page-images">
+    <f:for each="{pageImages}" as="image">
+      <div class="page-image-item">
+        <f:image image="{image}" alt="{image.alternative}" title="{image.title}" />
+      </div>
+    </f:for>
+  </div>
+</f:if>
