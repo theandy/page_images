@@ -25,3 +25,7 @@ lib.pageImages {
         }
     }
 }
+
+lib.pageImageUrl = FLUIDTEMPLATE
+lib.pageImageUrl < lib.pageImages
+lib.pageImageUrl.templateName = PageImageUrl
