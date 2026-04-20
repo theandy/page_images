@@ -3,21 +3,33 @@
 ## Beschreibung
 
 Ermöglicht die Pflege und Ausgabe von **mehreren Bildern pro Seite**
-(Feld `tx_page_image` in `pages`).
+über das Feld `tx_page_image` in `pages`.
 
 ------------------------------------------------------------------------
 
 ## Installation
 
 -   Extension installieren
--   TCA-Feld wird der Seite hinzugefügt
+-   Feld steht im Seiten-Datensatz zur Verfügung (FAL, Mehrfachauswahl)
 
 ------------------------------------------------------------------------
 
 ## Verwendung im Template
 
+### Mehrere Bilder ausgeben
+
 ``` html
 <f:cObject typoscriptObjectPath="lib.pageImages" data="{data}" />
+```
+
+------------------------------------------------------------------------
+
+### Nur Bild-URL (erstes Bild)
+
+Inline möglich:
+
+``` html
+{f:cObject(typoscriptObjectPath: 'lib.pageImageUrl', data: data)}
 ```
 
 ------------------------------------------------------------------------
@@ -53,17 +65,32 @@ lib.pageImages {
         }
     }
 }
+
+lib.pageImageUrl < lib.pageImages
+lib.pageImageUrl.templateName = PageImageUrl
 ```
 
 ------------------------------------------------------------------------
 
-## Fluid (Default Template)
+## Fluid (Default Templates)
+
+### PageImages.html
 
 ``` html
 <f:if condition="{pageImages}">
     <f:for each="{pageImages}" as="image">
         <f:image image="{image}" />
     </f:for>
+</f:if>
+```
+
+------------------------------------------------------------------------
+
+### PageImageUrl.html
+
+``` html
+<f:if condition="{pageImages.0}">
+    <f:uri.image image="{pageImages.0}" />
 </f:if>
 ```
 
@@ -85,4 +112,6 @@ plugin.tx_page_image.view {
 
 -   basiert auf TYPO3 FAL (`sys_file_reference`)
 -   Mehrfachbilder über TCA (`maxitems`)
--   Ausgabe erfolgt über `FilesProcessor`
+-   Ausgabe über `FilesProcessor`
+-   klare Trennung: Bilder (`lib.pageImages`) vs. URL
+    (`lib.pageImageUrl`)
