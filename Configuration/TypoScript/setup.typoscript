@@ -1,84 +1,3 @@
-/*
-tt_content.page_images = FLUIDTEMPLATE
-tt_content.page_images {
-
-    templateName = PageImages
-    templateRootPaths {
-        10 = EXT:page_images/Resources/Private/Templates/
-        20 = {$plugin.tx_pageoverview.view.templateRootPath}
-    }
-    partialRootPaths {
-        10 = EXT:page_images/Resources/Private/Partials/
-        20 = {$plugin.tx_pageoverview.view.partialRootPath}
-    }
-    layoutRootPaths {
-        10 = EXT:page_images/Resources/Private/Layouts/
-        20 = {$plugin.tx_pageoverview.view.layoutRootPath}
-    }
-
-    variables {
-        andreas = TEXT
-        andreas.value = Andreas
-
-        test = TEXT
-        test.value = Test
-    }
-
-    dataProcessing {
-        99 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-        99 {
-            references {
-                table = pages
-                uid.field = uid
-                fieldName = tx_page_image
-            }
-            as = pageImages
-        }
-    }
-
-
-
-}
-*/
-/*
-lib.page_image = COA
-lib.page_image {
-    10 = FILES
-    10 {
-        references {
-            table = pages
-            uid.field = uid
-            fieldName = tx_page_image
-        }
-        renderObj = IMG_RESOURCE
-        renderObj {
-            file {
-                import.data = file:current:uid
-                treatIdAsReference = 1
-                crop.data = file:current:crop
-                width = {$plugin.tx.page_image.width}
-                height = {$plugin.tx.page_image.height}
-            }
-            altText.data = file:current:title
-            titleText.data = file:current:title
-        }
-        stdWrap.required = 1
-    }
-
-    20 = IMG_RESOURCE
-    20 {
-        file = {$plugin.tx.page_image.default_img}
-        width = {$plugin.tx.page_image.width}
-        file.height = {$plugin.tx.page_image.height}
-        altText = Standardbild
-        titleText = Standardbild
-        stdWrap.if.isFalse.cObject < lib.page_image.10
-    }
-}
-
-*/
-
-
 lib.pageImages = FLUIDTEMPLATE
 lib.pageImages {
     templateName = PageImages
@@ -100,7 +19,6 @@ lib.pageImages {
         10 {
             references {
                 table = pages
-                uid.data = TSFE:id
                 fieldName = tx_page_image
             }
             as = pageImages
