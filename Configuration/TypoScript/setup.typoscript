@@ -1,5 +1,5 @@
-tt_content.pageoverview_pages = FLUIDTEMPLATE
-tt_content.pageoverview_pages {
+tt_content.page_images = FLUIDTEMPLATE
+tt_content.page_images {
 
     templateName = PageImages
     templateRootPaths {
@@ -13,6 +13,14 @@ tt_content.pageoverview_pages {
     layoutRootPaths {
         10 = EXT:page_images/Resources/Private/Layouts/
         20 = {$plugin.tx_pageoverview.view.layoutRootPath}
+    }
+
+    variables {
+        andreas = TEXT
+        andreas.value = Andreas
+
+        test = TEXT
+        test.value = Test
     }
 
     dataProcessing {
