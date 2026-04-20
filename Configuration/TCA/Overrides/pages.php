@@ -17,7 +17,7 @@ $additionalColumns = [
                     'createNewRelationLinkTitle' => 'Bild hinzufügen',
                     'showPossibleLocalizationRecords' => true,
                 ],
-                'maxitems' => 1,
+                'maxitems' => 10,
             ],
             'jpg,jpeg,png,svg,gif' // Erlaubte Bildtypen
         ),
