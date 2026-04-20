@@ -1,9 +1,12 @@
-# constants.typoscript  (oberhalb der Konstanten, NICHT auskommentieren!)
-# customcategory=pageimage=LLL:EXT:page_images/Resources/Private/Language/locallang_be.xlf:cat.pageimage
-# customsubcategory=files=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.files
-# customsubcategory=app=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.app
-# customsubcategory=manifest=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.manifest
-# customsubcategory=css=LLL:EXT:al_favicons/Resources/Private/Language/locallang_be.xlf:sub.css
+
+
+
+# cat=plugin.tx_pageoverview//10; type=string; label=Template Root Path
+plugin.tx_page_image.view.templateRootPath =
+# cat=plugin.tx_pageoverview//11; type=string; label=Partial Root Path
+plugin.tx_page_image.view.partialRootPath =
+# cat=plugin.tx_pageoverview//12; type=string; label=Layout Root Path
+plugin.tx_page_image.view.layoutRootPath =
 
 plugin.tx.page_image {
 

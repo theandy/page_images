@@ -1,3 +1,4 @@
+/*
 tt_content.page_images = FLUIDTEMPLATE
 tt_content.page_images {
 
@@ -38,7 +39,7 @@ tt_content.page_images {
 
 
 }
-
+*/
 /*
 lib.page_image = COA
 lib.page_image {
@@ -83,12 +84,15 @@ lib.pageImages {
     templateName = PageImages
     templateRootPaths {
         10 = EXT:page_images/Resources/Private/Templates/
+        20 = {$plugin.tx_page_image.view.templateRootPath}
     }
     partialRootPaths {
         10 = EXT:page_images/Resources/Private/Partials/
+        20 = {$plugin.tx_page_image.view.partialRootPath}
     }
     layoutRootPaths {
         10 = EXT:page_images/Resources/Private/Layouts/
+        20 = {$plugin.tx_page_image.view.layoutRootPath}
     }
 
     dataProcessing {
