@@ -28,11 +28,14 @@ tt_content.page_images {
         99 {
             references {
                 table = pages
+                uid.field = uid
                 fieldName = tx_page_image
             }
             as = pageImages
         }
     }
+
+
 
 }
 
